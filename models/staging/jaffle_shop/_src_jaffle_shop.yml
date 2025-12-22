@@ -1,5 +1,6 @@
 sources:
   - name: jaffle_shop
+    description: A clone of a Postgres database
     database: raw
     schema: jaffle_shop
     config:
@@ -10,6 +11,7 @@ sources:
           loaded_at_field: _etl_loaded_at
     tables:
       - name: customers
+        description: Raw customers data
         freshness: null
         columns:
           - name: id
