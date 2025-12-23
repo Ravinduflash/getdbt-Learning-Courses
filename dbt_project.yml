@@ -36,6 +36,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
+  +post-hook: 
+    - "{{ grant_select(role='reporter') }}"
   jaffle_shop_new:
     staging:
       +materialized: view
